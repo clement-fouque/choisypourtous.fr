@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Choisy 2026 - Ensemble pour l'avenir</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Tailwind Config -->
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ['Inter', 'sans-serif'],
+              serif: ['Playfair Display', 'serif'],
+            },
+            colors: {
+              'republic-blue': '#002654',
+              'republic-red': '#ED2939',
+              'slate-custom': '#334155',
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-slate-50 font-sans text-slate-800">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-transparent py-4">
+      <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <div class="w-10 h-10 bg-republic-blue rounded-full flex items-center justify-center text-white font-bold font-serif text-xl">
+            C
+          </div>
+          <span id="nav-logo-text" class="text-xl font-bold tracking-tight text-white drop-shadow-md transition-colors">
+            Choisy 2026
+          </span>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex space-x-8">
+          <a href="#accueil" class="nav-link text-white drop-shadow-md hover:text-blue-200 font-medium transition-colors">Accueil</a>
+          <a href="#notre-equipe" class="nav-link text-white drop-shadow-md hover:text-blue-200 font-medium transition-colors">Notre Équipe</a>
+          <a href="#notre-programme" class="nav-link text-white drop-shadow-md hover:text-blue-200 font-medium transition-colors">Notre Programme</a>
+          <a href="#contact" class="nav-link text-white drop-shadow-md hover:text-blue-200 font-medium transition-colors">Contact</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-btn" class="md:hidden text-republic-blue p-2 bg-white rounded-md shadow-sm">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+
+      <!-- Mobile Menu Dropdown -->
+      <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t">
+        <div class="flex flex-col py-4">
+          <a href="#accueil" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Accueil</a>
+          <a href="#notre-equipe" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Notre Équipe</a>
+          <a href="#notre-programme" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Notre Programme</a>
+          <a href="#contact" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Contact</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="accueil" class="relative h-screen flex items-center justify-center overflow-hidden">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+          alt="Campagne verdoyante de Choisy" 
+          class="w-full h-full object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-b from-slate-900/60 to-republic-blue/40"></div>
+      </div>
+
+      <div class="container mx-auto px-4 relative z-10 text-center text-white">
+        <h2 class="text-xl md:text-2xl font-light mb-4 uppercase tracking-widest">Élections Municipales 2026</h2>
+        <h1 class="text-5xl md:text-7xl font-serif font-bold mb-6 leading-tight">
+          Une nouvelle dynamique<br/>pour Choisy
+        </h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto mb-10 text-slate-100">
+          Une équipe engagée, diverse et à l'écoute pour bâtir ensemble l'avenir de notre commune.
+        </p>
+        <a href="#notre-programme" class="inline-block bg-republic-red hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full transition-transform transform hover:scale-105 shadow-lg">
+          Découvrir notre projet
+        </a>
+      </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-8">
+            Une liste active et diversifiée
+          </h2>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Chères Choisyliennes, Chers Choisyliens,
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed mb-6">
+            Nous avons l'honneur de vous présenter une équipe renouvelée, alliant l'expérience de la gestion communale et le dynamisme de nouveaux visages. Notre liste rassemble des compétences variées : comptables, agriculteurs, retraités, artisans et jeunes actifs.
+          </p>
+          <p class="text-lg text-slate-600 leading-relaxed">
+            Forte de la présence de <span class="font-bold text-republic-blue">3 anciens conseillers</span>, dont <span class="font-bold text-republic-blue">Jacqueline Ceccon</span>, notre équipe est prête à s'investir pleinement pour le bien-être de tous les habitants et la préservation de notre cadre de vie exceptionnel en Haute-Savoie.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="notre-equipe" class="py-20 bg-slate-50">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Les 19 Candidats</h2>
+          <div class="w-24 h-1 bg-republic-red mx-auto rounded"></div>
+          <p class="mt-4 text-slate-600">Des femmes et des hommes issus de tous les quartiers de Choisy.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
+          
+          <!-- Tête de liste -->
+          <div class="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-republic-blue border-2 group md:col-span-2 md:row-span-2">
+            <div class="relative overflow-hidden h-64 bg-slate-200">
+              <img src="https://picsum.photos/seed/51/400/400" alt="Jacqueline Ceccon" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+              <div class="absolute top-4 left-4 bg-republic-blue text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Tête de liste</div>
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-2xl">Jacqueline Ceccon</h3>
+              <p class="text-slate-500 font-medium mb-1">Retraitée de la fonction publique</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2">
+                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Centre-Bourg
+              </div>
+            </div>
+          </div>
+
+          <!-- Other Candidates -->
+          <!-- Generated static blocks for the remaining 18 candidates -->
+          
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/52/400/400" alt="Michel Dupont" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Michel Dupont</h3>
+              <p class="text-slate-500 font-medium mb-1">Agriculteur</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Hameaux</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/53/400/400" alt="Sophie Martin" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Sophie Martin</h3>
+              <p class="text-slate-500 font-medium mb-1">Comptable</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> La Plaine</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/54/400/400" alt="Pierre Durand" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Pierre Durand</h3>
+              <p class="text-slate-500 font-medium mb-1">Ancien Conseiller</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Route d'Annecy</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/55/400/400" alt="Claire Bernard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Claire Bernard</h3>
+              <p class="text-slate-500 font-medium mb-1">Enseignante</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Le Cret</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/56/400/400" alt="Lucas Petit" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Lucas Petit</h3>
+              <p class="text-slate-500 font-medium mb-1">Ingénieur BTP</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Centre-Bourg</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/57/400/400" alt="Emma Dubois" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Emma Dubois</h3>
+              <p class="text-slate-500 font-medium mb-1">Infirmière</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Vignes</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/58/400/400" alt="Thomas Leroy" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Thomas Leroy</h3>
+              <p class="text-slate-500 font-medium mb-1">Artisan</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> La Balme</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/59/400/400" alt="Julie Moreau" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Julie Moreau</h3>
+              <p class="text-slate-500 font-medium mb-1">Ancienne Conseillère</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Chef-lieu</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/60/400/400" alt="Nicolas Fournier" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Nicolas Fournier</h3>
+              <p class="text-slate-500 font-medium mb-1">Chef d'entreprise</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Route de Genève</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/61/400/400" alt="Marie Girard" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Marie Girard</h3>
+              <p class="text-slate-500 font-medium mb-1">Étudiante en Droit</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Centre-Bourg</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/62/400/400" alt="Paul Bonnet" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Paul Bonnet</h3>
+              <p class="text-slate-500 font-medium mb-1">Retraité du transport</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Écoles</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/63/400/400" alt="Léa Rousseau" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Léa Rousseau</h3>
+              <p class="text-slate-500 font-medium mb-1">Assistante Maternelle</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Le Stade</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/64/400/400" alt="Antoine Blanc" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Antoine Blanc</h3>
+              <p class="text-slate-500 font-medium mb-1">Technicien</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> La Foret</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/65/400/400" alt="Chloé Guerine" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Chloé Guerine</h3>
+              <p class="text-slate-500 font-medium mb-1">Commerçante</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Centre-Bourg</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/66/400/400" alt="Julien Mercier" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Julien Mercier</h3>
+              <p class="text-slate-500 font-medium mb-1">Agriculteur</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Champs</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/67/400/400" alt="Manon Lefebvre" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Manon Lefebvre</h3>
+              <p class="text-slate-500 font-medium mb-1">Architecte</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Le Parc</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/68/400/400" alt="Alexandre Faure" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Alexandre Faure</h3>
+              <p class="text-slate-500 font-medium mb-1">Pompier Volontaire</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> La Caserne</div>
+            </div>
+          </div>
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group">
+            <div class="relative overflow-hidden h-48 bg-slate-200">
+              <img src="https://picsum.photos/seed/69/400/400" alt="Camille Lambert" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0" />
+            </div>
+            <div class="p-4">
+              <h3 class="font-bold text-republic-blue text-lg">Camille Lambert</h3>
+              <p class="text-slate-500 font-medium mb-1">Secrétaire</p>
+              <div class="flex items-center text-slate-400 text-sm mt-2"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Le Bourg</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Program Section -->
+    <section id="notre-programme" class="py-20 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Que souhaite faire notre liste ?</h2>
+          <div class="w-24 h-1 bg-republic-red mx-auto rounded"></div>
+          <p class="mt-4 text-slate-600">Nos engagements concrets pour le mandat à venir.</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Transparence -->
+          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="file-text" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Transparence</h3>
+            <p class="text-slate-600 mb-6 italic">Une gestion claire et honnête des affaires communales.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Audit financier complet (budget, dettes).</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Communication régulière sur les décisions.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Accès facilité aux documents municipaux.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Démocratie Citoyenne -->
+          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="users" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Démocratie Citoyenne</h3>
+            <p class="text-slate-600 mb-6 italic">Vous donner la parole sur les grands projets.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Consultation citoyenne avant les grands travaux.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Création de comités de quartier.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Permanences régulières des élus.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Dynamisation -->
+          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="trending-up" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Dynamisation</h3>
+            <p class="text-slate-600 mb-6 italic">Refaire vivre notre chef-lieu et nos commerces.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Soutien aux commerces de proximité.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Animations culturelles au chef-lieu.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Attractivité pour les nouvelles entreprises.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Social & CCAS -->
+          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="heart" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Social & CCAS</h3>
+            <p class="text-slate-600 mb-6 italic">Solidarité envers nos aînés et les plus fragiles.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Repas des aînés convivial et qualitatif.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Actions intergénérationnelles.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Renforcement des aides du CCAS.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Vie Associative -->
+          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="music" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Vie Associative</h3>
+            <p class="text-slate-600 mb-6 italic">Le cœur battant de Choisy.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Subventions équitables pour les associations.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Mise à disposition de locaux adaptés.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Aide logistique pour les événements.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Jeunesse & École -->
+          <div class="bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
+              <i data-lucide="graduation-cap" class="w-7 h-7"></i>
+            </div>
+            <h3 class="text-xl font-bold text-slate-800 mb-3">Jeunesse & École</h3>
+            <p class="text-slate-600 mb-6 italic">Investir dans l'avenir de nos enfants.</p>
+            <ul class="space-y-2">
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Sécurisation des abords de l'école.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Activités périscolaires enrichies.</span>
+              </li>
+              <li class="flex items-start text-sm text-slate-700">
+                <i data-lucide="chevron-right" class="w-4 h-4 text-republic-red mt-0.5 mr-2 flex-shrink-0"></i>
+                <span>Projets pédagogiques en lien avec la commune.</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA / Vote Section -->
+    <section class="py-20 bg-republic-blue text-white">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-serif font-bold mb-6">Le changement commence avec vous</h2>
+        <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">
+          Dimanche prochain, faites le choix d'une équipe soudée et compétente pour Choisy.
+        </p>
+        <div class="inline-block bg-white text-republic-blue px-10 py-4 rounded-lg font-bold text-lg shadow-xl">
+          Votez pour la liste "Choisy 2026"
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-12">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">Nous Contacter</h3>
+            <ul class="space-y-3">
+              <li class="flex items-center">
+                <i data-lucide="mail" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
+                <a href="mailto:contact@choisy2026.fr" class="hover:text-white transition-colors">contact@choisy2026.fr</a>
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="phone" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
+                <span>06 12 34 56 78</span>
+              </li>
+              <li class="flex items-center">
+                <i data-lucide="map-pin" class="w-4.5 h-4.5 mr-3 text-republic-red"></i>
+                <span>Permanence : Salle des Fêtes<br/>Tous les jeudis 18h-20h</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">Navigation</h3>
+            <ul class="space-y-2">
+              <li><a href="#accueil" class="hover:text-white transition-colors text-sm">Accueil</a></li>
+              <li><a href="#notre-equipe" class="hover:text-white transition-colors text-sm">Notre Équipe</a></li>
+              <li><a href="#notre-programme" class="hover:text-white transition-colors text-sm">Notre Programme</a></li>
+            </ul>
+          </div>
+
+          <!-- Legal -->
+          <div>
+            <h3 class="text-white text-lg font-bold mb-4">Mentions Légales</h3>
+            <p class="text-sm text-slate-500 mb-4">
+              Site de campagne officiel pour les élections municipales de Choisy (Haute-Savoie). 
+              Ne pas jeter sur la voie publique.
+            </p>
+            <p class="text-sm text-slate-600">
+              &copy; 2026 Choisy 2026 - Tous droits réservés.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+  </body>
+</html>

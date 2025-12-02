@@ -1,0 +1,30 @@
+/* Custom Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure icons align nicely in lists */
+.lucide {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Mobile menu transition */
+#mobile-menu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Navbar transparency transition handled via JS classes, but basic state here */
+#navbar {
+  transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
+}
+
+/* Hover effects for candidates */
+.candidate-card:hover img {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+}
+
+.candidate-card img {
+  filter: grayscale(100%);
+}
