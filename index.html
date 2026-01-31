@@ -12,13 +12,13 @@
     <meta property="og:url" content="https://choisypourtous.fr/">
     <meta property="og:title" content="Choisy pour tous - Élections Municipales 2026">
     <meta property="og:description" content="Choisy pour tous : la liste des municipales 2026 à Choisy (Haute-Savoie). Une équipe engagée pour la citoyenneté, le patrimoine, le social et l’économie locale.">
-    <meta property="og:image" content="https://choisypourtous.fr/public/img/logo_choisy_pour_tous.png">
+    <meta property="og:image" content="https://choisypourtous.fr/assets/img/logo_choisy_pour_tous.png">
     
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="public/favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/favicon/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="public/favicon/android-chrome-192x192.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/img/favicon/android-chrome-192x192.png">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -30,64 +30,10 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <!-- Tailwind Config -->
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              serif: ['Playfair Display', 'serif'],
-            },
-            colors: {
-              'republic-blue': '#023047',
-              'republic-red': '#fb8500',
-              'slate-custom': '#334155',
-            }
-          }
-        }
-      }
-    </script>
+    <script src="assets/js/tailwind.config.js"></script>
 
-    <!-- Custom Styles (Merged from style.css) -->
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-
-      /* Ensure icons align nicely in lists */
-      .lucide {
-        display: inline-block;
-        vertical-align: middle;
-      }
-
-      /* Mobile menu transition */
-      #mobile-menu {
-        transition: all 0.3s ease-in-out;
-      }
-
-      /* Navbar transparency transition handled via JS classes, but basic state here */
-      #navbar {
-        transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
-      }
-
-      /* Hover effects for candidates */
-      .candidate-card:hover img {
-        transform: scale(1.1);
-        filter: grayscale(0%);
-      }
-
-      .candidate-card img {
-        /* filter: grayscale(100%); */
-        transition: filter 0.5s ease, transform 0.5s ease;
-      }
-      
-      /* Additional polish for the program cards */
-      .program-card {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-    </style>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body class="bg-slate-50 font-sans text-slate-800">
 
@@ -96,7 +42,7 @@
       <div class="container mx-auto px-4 md:px-8 flex justify-between items-center">
         <!-- Logo -->
         <a href="#accueil" class="flex items-center space-x-2">
-          <img src="public/img/logo_choisy_pour_tous.png" alt="Logo Choisy pour tous" class="w-12 h-12 object-contain" />
+          <img src="assets/img/logo_choisy_pour_tous.png" alt="Logo Choisy pour tous" class="w-12 h-12 object-contain" />
           <span id="nav-logo-text" class="text-xl font-bold tracking-tight text-republic-blue transition-colors">
             Choisy pour tous
           </span>
@@ -132,7 +78,7 @@
       <!-- Background Image with Overlay -->
       <div class="absolute inset-0 z-0">
         <img 
-          src="public/img/background_hero_choisy.avif"
+          src="assets/img/background_hero_choisy.avif"
           alt="Campagne verdoyante avec montagnes en arrière-plan" 
           class="w-full h-full object-cover"
         />
@@ -189,7 +135,7 @@
           <!-- Candidates -->          
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/francois.avif" alt="Francois Dizier" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/francois.avif" alt="Francois Dizier" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Francois Dizier</h3>
@@ -211,7 +157,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/cedric.avif" alt="Cédric Regli" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/cedric.avif" alt="Cédric Regli" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Cédric Regli</h3>
@@ -233,7 +179,7 @@
 
            <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/anne_laure.avif" alt="Anne-Laure Lavorel" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/anne_laure.avif" alt="Anne-Laure Lavorel" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Anne-Laure Lavorel</h3>
@@ -255,7 +201,7 @@
          
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/killian.avif" alt="Killian L'homme" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/killian.avif" alt="Killian L'homme" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Killian L'homme</h3>
@@ -277,7 +223,7 @@
 
            <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/xaviere.avif" alt="Xavière Michelot" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/xaviere.avif" alt="Xavière Michelot" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Xavière Michelot</h3>
@@ -301,7 +247,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/olivier.avif" alt="Olivier Miguet" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/olivier.avif" alt="Olivier Miguet" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Olivier Miguet</h3>
@@ -321,7 +267,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/jacqueline.avif" alt="Jacqueline Ceccon" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/jacqueline.avif" alt="Jacqueline Ceccon" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Jacqueline Ceccon</h3>
@@ -343,7 +289,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/simon.avif" alt="Simon Desseigne" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/simon.avif" alt="Simon Desseigne" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Simon Desseigne</h3>
@@ -367,7 +313,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/aurore.avif" alt="Aurore Mossière" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/aurore.avif" alt="Aurore Mossière" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Aurore Mossière</h3>
@@ -389,7 +335,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/clement.avif" alt="Clément Fouque" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/clement.avif" alt="Clément Fouque" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Clément Fouque</h3>
@@ -409,7 +355,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/sylvie.avif" alt="Sylvie Auroy" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/sylvie.avif" alt="Sylvie Auroy" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Sylvie Auroy</h3>
@@ -435,7 +381,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/kevin.avif" alt="Kevin Zamora" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/kevin.avif" alt="Kevin Zamora" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Kevin Zamora</h3>
@@ -461,7 +407,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/gwennaelle.avif" alt="Gwennaëlle Alexandre" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/gwennaelle.avif" alt="Gwennaëlle Alexandre" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Gwennaëlle Alexandre</h3>
@@ -483,7 +429,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/cyril.avif" alt="Cyril Masson" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/cyril.avif" alt="Cyril Masson" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Cyril Masson</h3>
@@ -505,7 +451,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/marion.avif" alt="Marion Sagnol Mousset" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/marion.avif" alt="Marion Sagnol Mousset" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Marion Sagnol Mousset</h3>
@@ -525,7 +471,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/jean_luc.avif" alt="Jean-Luc Giacometti" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/jean_luc.avif" alt="Jean-Luc Giacometti" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Jean-Luc Giacometti</h3>
@@ -549,7 +495,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/pauline.avif" alt="Pauline Bolard" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/pauline.avif" alt="Pauline Bolard" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Pauline Bolard</h3>
@@ -571,7 +517,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/paule.avif" alt="Paule Bossert" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/paule.avif" alt="Paule Bossert" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Paule Bossert</h3>
@@ -593,7 +539,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/andreas.avif" alt="Andréas Handlbauer" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/andreas.avif" alt="Andréas Handlbauer" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Andréas Handlbauer</h3>
@@ -611,7 +557,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/sylvia.avif" alt="Sylvia Mollier" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/sylvia.avif" alt="Sylvia Mollier" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Sylvia Mollier</h3>
@@ -629,7 +575,7 @@
 
           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
-              <img src="public/img/profiles/romain.avif" alt="Romain Garcin" class="w-full h-full object-cover object-[50%_15%]" />
+              <img src="assets/img/profiles/romain.avif" alt="Romain Garcin" class="w-full h-full object-cover object-[50%_15%]" />
             </div>
             <div class="p-4 flex flex-col flex-1">
               <h3 class="font-bold text-republic-blue text-lg">Romain Garcin</h3>
@@ -807,121 +753,6 @@
     </div>
 
     <!-- Application Script -->
-    <script>
-        // Initialize Lucide Icons
-        lucide.createIcons();
-        
-        // Modal Logic
-        const modal = document.getElementById('candidate-modal');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-        const modalPanel = document.getElementById('modal-panel');
-        const modalName = document.getElementById('modal-name');
-        const modalJob = document.getElementById('modal-job');
-        const modalLocation = document.getElementById('modal-location');
-        const modalImage = document.getElementById('modal-image');
-        const modalDescription = document.getElementById('modal-description');
-
-        function openCandidateModal(button) {
-            // Find the card element (parent of parent of button)
-            const card = button.closest('.candidate-card');
-            const img = card.querySelector('img');
-            const name = card.querySelector('h3').innerText;
-            const job = card.querySelector('p').innerText;
-            // The location text is inside a div with flex, we can just get the text content and trim
-            // Structure: <div class="flex ..."><i ...></i> Location</div>
-            // We use querySelector with the lucide icon's parent
-            const locationDiv = card.querySelector('.flex.items-center.text-slate-400');
-            const location = locationDiv ? locationDiv.innerText.trim() : '';
-
-            // Populate Modal
-            modalImage.src = img.src;
-            modalImage.alt = img.alt;
-            
-            modalName.innerText = name;
-            modalJob.innerText = job;
-            modalLocation.innerText = location;
-            
-            // Description logic
-            const descriptionEl = card.querySelector('.candidate-description');
-            if (descriptionEl) {
-                modalDescription.innerHTML = descriptionEl.innerHTML;
-            } else {
-                modalDescription.innerText = "Madame, Monsieur,\n\nEngagé(e) pour Choisy, je souhaite apporter mon expérience et mon dynamisme au service de notre commune. C'est avec enthousiasme que je rejoins l'équipe 'Choisy pour tous' pour porter nos projets communs.";
-            }
-
-            // Show Modal with transition
-            modal.classList.remove('hidden');
-            // Small timeout to allow display:block to apply before opacity transition
-            setTimeout(() => {
-                modalBackdrop.classList.remove('opacity-0');
-                modalPanel.classList.remove('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
-            }, 10);
-        }
-
-        function closeCandidateModal() {
-            modalBackdrop.classList.add('opacity-0');
-            modalPanel.classList.add('opacity-0', 'translate-y-4', 'sm:translate-y-0', 'sm:scale-95');
-            
-            setTimeout(() => {
-                modal.classList.add('hidden');
-            }, 300);
-        }
-
-        // Close on backdrop click
-        if (modal) {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal || e.target === modalBackdrop || e.target.closest('#modal-backdrop')) {
-                    closeCandidateModal();
-                }
-            });
-        }
-
-        // Close on Escape key
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
-                closeCandidateModal();
-            }
-        });
-
-        // Navbar Logic
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        // Mobile Menu Toggle
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-            });
-        }
-
-        // Close mobile menu on link click
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (mobileMenu) mobileMenu.classList.add('hidden');
-            });
-        });
-
-        // Copy Email Function
-        function copyEmail() {
-            const email = 'contact@choisypourtous.fr';
-            // Create a temporary input element
-            const tempInput = document.createElement('input');
-            tempInput.value = email;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-
-            // Show feedback
-            const feedback = document.getElementById('copy-feedback');
-            if (feedback) {
-                feedback.classList.remove('opacity-0');
-                setTimeout(() => {
-                    feedback.classList.add('opacity-0');
-                }, 2000);
-            }
-        }
-    </script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
