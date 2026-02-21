@@ -92,18 +92,24 @@
         {
           "@type": "ListItem",
           "position": 2,
+          "name": "Actualités",
+          "item": "https://choisypourtous.fr/#actualites"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
           "name": "Notre Équipe",
           "item": "https://choisypourtous.fr/#notre-equipe"
         },
         {
           "@type": "ListItem",
-          "position": 3,
+          "position": 4,
           "name": "Notre Programme",
           "item": "https://choisypourtous.fr/#notre-programme"
         },
         {
           "@type": "ListItem",
-          "position": 4,
+          "position": 5,
           "name": "Contact",
           "item": "https://choisypourtous.fr/#contact"
         }
@@ -155,6 +161,7 @@
         <!-- Desktop Menu -->
         <div class="hidden md:flex space-x-8">
           <a href="#accueil" class="nav-link text-slate-700 hover:text-republic-blue font-medium transition-colors">Accueil</a>
+          <a href="#actualites" class="nav-link text-slate-700 hover:text-republic-blue font-medium transition-colors">Actualités</a>
           <a href="#notre-equipe" class="nav-link text-slate-700 hover:text-republic-blue font-medium transition-colors">Notre Équipe</a>
           <a href="#notre-programme" class="nav-link text-slate-700 hover:text-republic-blue font-medium transition-colors">Notre Programme</a>
           <a href="#contact" class="nav-link text-slate-700 hover:text-republic-blue font-medium transition-colors">Contact</a>
@@ -170,6 +177,7 @@
       <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-xl border-t">
         <div class="flex flex-col py-4">
           <a href="#accueil" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Accueil</a>
+          <a href="#actualites" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Actualités</a>
           <a href="#notre-equipe" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Notre Équipe</a>
           <a href="#notre-programme" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Notre Programme</a>
           <a href="#contact" class="mobile-link px-8 py-3 text-left text-slate-700 hover:bg-blue-50 hover:text-republic-blue font-medium">Contact</a>
@@ -226,8 +234,67 @@
       </div>
     </section>
 
+    <!-- Actualités Section -->
+    <section id="actualites" class="py-20 bg-slate-50">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Actualités</h2>
+          <div class="w-24 h-1 bg-republic-red mx-auto rounded"></div>
+          <p class="mt-4 text-slate-600">Suivez les dernières nouvelles de notre campagne.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
+          <!-- News Cards (left column ~60%) -->
+          <div class="lg:col-span-3 space-y-6">
+
+            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
+              <time class="text-sm text-republic-red font-medium">17 février 2026</time>
+              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Annonce des dates des réunions publiques</h3>
+              <p class="text-slate-600 leading-relaxed">Nous sommes heureux de vous annoncer les deux réunions publiques que nous avons prévues au <strong>stade des Menulles</strong>. Nous vous préseenterons notre programme et pourrons échanger ensemble : <br/>
+                <br/> - <strong>Mardi 3 mars à 19h00</strong>
+                <br/> - <strong>Mercredi 11 mars à 18h00</strong>
+                </p>
+            </article>
+
+            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
+              <time class="text-sm text-republic-red font-medium">15 février 2026</time>
+              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Rencontre avec les habitants et dépot du prospectus de Choisy pour tous</h3>
+              <p class="text-slate-600 leading-relaxed">Les membres de la liste Choisy pour tous ont commencé à rencontrer les habitants de la commune pour présenter notre programme, recueillir leur avis. Si vous n'étiez pas présent, nous avons déposé un prospectus dans votre boite aux lettres.</p>
+            </article>
+
+            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
+              <time class="text-sm text-republic-red font-medium">22 janvier 2026</time>
+              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Présentation de la liste Choisy pour tous</h3>
+              <p class="text-slate-600 leading-relaxed">Découvrez sur notre site et sur la page Facebook les visages, les parcours, et les motivations de celles et ceux qui s'engagent pour l'avenir de Choisy.</p>
+            </article>
+
+            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
+              <time class="text-sm text-republic-red font-medium">Décembre 2025</time>
+              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Lancement officiel de la liste Choisy pour tous</h3>
+              <p class="text-slate-600 leading-relaxed">Notre équipe de 21 candidats est désormais officiellement constituée. Nous travaillons sur notre programme municipal.</p>
+            </article>
+          </div>
+
+          <!-- Facebook Feed (right column ~40%) -->
+          <div class="lg:col-span-2 flex justify-center">
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61585296192309&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+              width="500"
+              height="700"
+              class="border-none overflow-hidden rounded-xl shadow-sm w-full max-w-[500px]"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Team Section -->
-    <section id="notre-equipe" class="py-20 bg-slate-50">
+    <section id="notre-equipe" class="py-20 bg-white">
       <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Les 21 Candidats Choisy pour tous</h2>
@@ -710,7 +777,7 @@
     </section>
 
     <!-- Program Section -->
-    <section id="notre-programme" class="py-20 bg-white">
+    <section id="notre-programme" class="py-20 bg-slate-50">
       <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Que souhaite faire notre liste ?</h2>
@@ -723,7 +790,7 @@
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
           <!-- Communication citoyenne -->
-          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
               <i data-lucide="message-circle" class="w-7 h-7"></i>
             </div>
@@ -732,7 +799,7 @@
           </div>
 
           <!-- Cohésion sociale et intergénérationnelle -->
-          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
               <i data-lucide="heart-handshake" class="w-7 h-7"></i>
             </div>
@@ -741,7 +808,7 @@
           </div>
 
           <!-- Patrimoine immobilier et naturel -->
-          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
               <i data-lucide="landmark" class="w-7 h-7"></i>
             </div>
@@ -750,7 +817,7 @@
           </div>
 
           <!-- Nos entrepreneurs, nos commercants, nos agriculteurs -->
-          <div class="program-card bg-slate-50 rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
+          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
             <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
               <i data-lucide="store" class="w-7 h-7"></i>
             </div>
@@ -804,6 +871,7 @@
             <h3 class="text-white text-lg font-bold mb-4">Navigation</h3>
             <ul class="space-y-2">
               <li><a href="#accueil" class="hover:text-white transition-colors text-sm">Accueil</a></li>
+              <li><a href="#actualites" class="hover:text-white transition-colors text-sm">Actualités</a></li>
               <li><a href="#notre-equipe" class="hover:text-white transition-colors text-sm">Notre Équipe</a></li>
               <li><a href="#notre-programme" class="hover:text-white transition-colors text-sm">Notre Programme</a></li>
             </ul>
