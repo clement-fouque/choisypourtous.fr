@@ -92,6 +92,45 @@ mobileLinks.forEach(link => {
     });
 });
 
+// Actualités: show more / show less
+const actualitesMoreWrap = document.getElementById('actualites-more-wrap');
+const actualitesShowMoreBtn = document.getElementById('actualites-show-more');
+const actualitesMoreLabel = document.getElementById('actualites-more-label');
+const actualitesChevron = document.getElementById('actualites-chevron');
+const actualitesMoreItems = document.querySelectorAll('.actualite-item--more');
+
+if (actualitesMoreWrap && actualitesShowMoreBtn && actualitesMoreItems.length > 0) {
+  let expanded = false;
+  actualitesShowMoreBtn.addEventListener('click', () => {
+    expanded = !expanded;
+    actualitesMoreItems.forEach((el) => {
+      if (expanded) {
+        el.classList.remove('hidden');
+        el.classList.add('actualite-item--visible');
+      } else {
+        el.classList.add('hidden');
+        el.classList.remove('actualite-item--visible');
+      }
+    });
+    actualitesShowMoreBtn.setAttribute('aria-expanded', expanded);
+    actualitesMoreLabel.textContent = expanded ? "Voir moins d'actualités" : "Voir plus d'actualités";
+    if (actualitesChevron) actualitesChevron.style.transform = expanded ? 'rotate(180deg)' : '';
+  });
+} else if (actualitesMoreWrap && actualitesMoreItems.length === 0) {
+  actualitesMoreWrap.style.display = 'none';
+}
+
+// Programme accordion
+document.querySelectorAll('[data-program-card]').forEach(card => {
+  const header = card.querySelector('.program-card__header');
+  if (!header) return;
+  header.addEventListener('click', () => {
+    const isOpen = card.classList.contains('program-card--open');
+    card.classList.toggle('program-card--open', !isOpen);
+    header.setAttribute('aria-expanded', !isOpen);
+  });
+});
+
 // Copy Email Function
 function copyEmail() {
     const email = 'contact@choisypourtous.fr';

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Choisy pour tous : la liste des municipales 2026 à Choisy (Haute-Savoie). Une équipe engagée pour la citoyenneté, le patrimoine, le social et l’économie locale." />
+    <meta name="description" content="Choisy pour tous : municipales 2026 à Choisy (Haute-Savoie). Une équipe engagée pour la citoyenneté, le patrimoine, le social et l’économie locale." />
     <title>Choisy pour tous - Élections Municipales 2026 - Haute-Savoie</title>
     <link rel="canonical" href="https://choisypourtous.fr/" />
 
@@ -245,51 +245,109 @@
           <p class="mt-4 text-slate-600">Suivez les dernières nouvelles de notre campagne.</p>
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8">
-          <!-- News Cards (left column ~60%) -->
-          <div class="lg:col-span-3 space-y-6">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-10">
+          <!-- News column with timeline accent -->
+          <div class="lg:col-span-3 relative">
+            <!-- Timeline line (desktop) -->
+            <div class="hidden lg:block absolute left-[11px] top-0 bottom-0 w-px bg-gradient-to-b from-republic-red/40 via-slate-200 to-transparent" aria-hidden="true"></div>
 
-            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
-              <time class="text-sm text-republic-red font-medium">17 février 2026</time>
-              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Annonce des dates des réunions publiques</h3>
-              <p class="text-slate-600 leading-relaxed">Nous sommes heureux de vous annoncer les deux réunions publiques que nous avons prévues au <strong>stade des Menulles</strong>. Nous vous préseenterons notre programme et pourrons échanger ensemble : <br/>
-                <br/> - <strong>Mardi 3 mars à 19h00</strong>
-                <br/> - <strong>Mercredi 11 mars à 18h00</strong>
-                </p>
-            </article>
+            <div id="actualites-list" class="space-y-6">
+              <!-- Featured (first) -->
+              <article class="actualite-item actualite-card actualite-card--featured group bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden border-l-4 border-l-republic-red">
+                <div class="p-6 md:p-7">
+                  <div class="flex flex-wrap items-center gap-3 mb-3">
+                    <span class="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-wider text-republic-red bg-red-50 px-3 py-1.5 rounded-full">
+                      <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+                      <time datetime="2026-03-04">4 mars 2026</time>
+                    </span>
+                  </div>
+                  <h3 class="text-xl font-bold text-slate-800 mb-3 group-hover:text-republic-blue transition-colors">Municipales 2026 – Comment fonctionne le vote à Choisy ?</h3>
+                  <p class="text-slate-600 leading-relaxed mb-4">Pour les élections municipales des 15 et 22 mars 2026, le mode de scrutin évolue, y compris dans notre commune.</p>
+                  <div class="space-y-3 text-slate-600 leading-relaxed">
+                    <p><strong class="text-republic-blue">Un scrutin de liste paritaire et proportionnel à deux tours</strong><br/>On vote désormais pour une liste complète de candidats, et non plus pour des personnes individuellement.</p>
+                    <p><strong class="text-republic-blue">Parité femme / homme obligatoire</strong><br/>Les listes doivent respecter une alternance stricte femme / homme.</p>
+                    <p><strong class="text-republic-blue">Fin du panachage</strong><br/>Il n'est plus possible de modifier un bulletin (ni ajouter, ni supprimer, ni changer l'ordre des noms).</p>
+                    <p><strong class="text-republic-blue">Comment sont répartis les sièges à Choisy (avec 2 listes) ?</strong></p>
+                    <ul class="list-disc pl-5 space-y-1 mb-2">
+                      <li>La liste optenant la majorité absolue au 1<sup>er</sup> tour reçoit la moitié (10) des sièges du conseil municipal.</li>
+                      <li>L'autre moitié (9) est répartie à la proportionnelle entre les listes.</li>
+                    </ul>
+                    <p>Si aucune liste n'obtient la majorité absolue, un 2<sup>e</sup> tour est organisé.</p>
+                    <p><strong class="text-republic-blue">Un seul tour de scrutin</strong> <br/>N'ayant que deux listes, il n'y aura qu'un seul tour de scrutin.</p>
+                    <p class="pt-2"><strong class="text-republic-blue">En résumé</strong> : en 2026, vous choisissez une équipe complète, et la répartition des sièges reflète plus fidèlement le résultat du vote.</p>
+                  </div>
+                </div>
+              </article>
 
-            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
-              <time class="text-sm text-republic-red font-medium">15 février 2026</time>
-              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Rencontre avec les habitants et dépot du prospectus de Choisy pour tous</h3>
-              <p class="text-slate-600 leading-relaxed">Les membres de la liste Choisy pour tous ont commencé à rencontrer les habitants de la commune pour présenter notre programme, recueillir leur avis. Si vous n'étiez pas présent, nous avons déposé un prospectus dans votre boite aux lettres.</p>
-            </article>
+              <article class="actualite-item actualite-card group bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-slate-200 transition-all duration-300 overflow-hidden pl-6 lg:pl-7 border-l-4 border-l-transparent hover:border-l-republic-red/50">
+                <div class="py-5 pr-5 pb-5">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-republic-red/80"></i>
+                    <time datetime="2026-02-17">17 février 2026</time>
+                  </span>
+                  <h3 class="text-lg font-bold text-slate-800 mt-2 mb-2 group-hover:text-republic-blue transition-colors line-clamp-2">Annonce des dates des réunions publiques</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">Nous sommes heureux de vous annoncer les deux réunions publiques au stade des Menulles : mardi 3 mars à 19h00 et mercredi 11 mars à 18h00.</p>
+                </div>
+              </article>
 
-            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
-              <time class="text-sm text-republic-red font-medium">22 janvier 2026</time>
-              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Présentation de la liste Choisy pour tous</h3>
-              <p class="text-slate-600 leading-relaxed">Découvrez sur notre site et sur la page Facebook les visages, les parcours, et les motivations de celles et ceux qui s'engagent pour l'avenir de Choisy.</p>
-            </article>
+              <article class="actualite-item actualite-card group bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-slate-200 transition-all duration-300 overflow-hidden pl-6 lg:pl-7 border-l-4 border-l-transparent hover:border-l-republic-red/50">
+                <div class="py-5 pr-5 pb-5">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-republic-red/80"></i>
+                    <time datetime="2026-02-15">15 février 2026</time>
+                  </span>
+                  <h3 class="text-lg font-bold text-slate-800 mt-2 mb-2 group-hover:text-republic-blue transition-colors line-clamp-2">Rencontre avec les habitants et dépot du prospectus de Choisy pour tous</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">Les membres de la liste Choisy pour tous ont commencé à rencontrer les habitants de la commune pour présenter notre programme, recueillir leur avis. Si vous n'étiez pas présent, nous avons déposé un prospectus dans votre boite aux lettres.</p>
+                </div>
+              </article>
 
-            <article class="bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-md transition-shadow duration-300 p-6">
-              <time class="text-sm text-republic-red font-medium">Décembre 2025</time>
-              <h3 class="text-lg font-bold text-slate-800 mt-2 mb-3">Lancement officiel de la liste Choisy pour tous</h3>
-              <p class="text-slate-600 leading-relaxed">Notre équipe de 21 candidats est désormais officiellement constituée. Nous travaillons sur notre programme municipal.</p>
-            </article>
+              <article class="actualite-item actualite-card group bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-slate-200 transition-all duration-300 overflow-hidden pl-6 lg:pl-7 border-l-4 border-l-transparent hover:border-l-republic-red/50">
+                <div class="py-5 pr-5 pb-5">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-republic-red/80"></i>
+                    <time datetime="2026-01-22">22 janvier 2026</time>
+                  </span>
+                  <h3 class="text-lg font-bold text-slate-800 mt-2 mb-2 group-hover:text-republic-blue transition-colors line-clamp-2">Présentation de la liste Choisy pour tous</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">Découvrez sur notre site et sur la page Facebook les visages, les parcours, et les motivations de celles et ceux qui s'engagent pour l'avenir de Choisy.</p>
+                </div>
+              </article>
+
+              <article class="actualite-item actualite-card group bg-white rounded-xl border border-slate-100 shadow-sm hover:shadow-lg hover:border-slate-200 transition-all duration-300 overflow-hidden pl-6 lg:pl-7 border-l-4 border-l-transparent hover:border-l-republic-red/50">
+                <div class="py-5 pr-5 pb-5">
+                  <span class="inline-flex items-center gap-1.5 text-xs font-medium text-slate-500">
+                    <i data-lucide="calendar" class="w-3.5 h-3.5 text-republic-red/80"></i>
+                    <time datetime="2025-12">Décembre 2025</time>
+                  </span>
+                  <h3 class="text-lg font-bold text-slate-800 mt-2 mb-2 group-hover:text-republic-blue transition-colors line-clamp-2">Lancement officiel de la liste Choisy pour tous</h3>
+                  <p class="text-slate-600 text-sm leading-relaxed line-clamp-3">Notre équipe de 21 candidats est désormais officiellement constituée. Nous travaillons sur notre programme municipal.</p>
+                </div>
+              </article>
+            </div>
+
+            <!-- Add new articles above: duplicate an article block and add classes actualite-item actualite-item--more hidden -->
+            <div id="actualites-more-wrap" class="mt-8 text-center">
+              <button type="button" id="actualites-show-more" class="actualites-more-btn inline-flex items-center gap-2 bg-white text-republic-blue font-semibold py-3 px-6 rounded-full border-2 border-republic-blue hover:bg-republic-blue hover:text-white transition-all duration-300 shadow-sm hover:shadow-md" aria-expanded="false">
+                <span id="actualites-more-label">Voir plus d'actualités</span>
+                <i data-lucide="chevron-down" class="w-5 h-5 transition-transform duration-300" id="actualites-chevron"></i>
+              </button>
+            </div>
           </div>
 
-          <!-- Facebook Feed (right column ~40%) -->
-          <div class="lg:col-span-2 flex justify-center">
-            <iframe
-              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61585296192309&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
-              width="500"
-              height="700"
-              class="border-none overflow-hidden rounded-xl shadow-sm w-full max-w-[500px]"
-              scrolling="no"
-              frameborder="0"
-              allowfullscreen="true"
-              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-              loading="lazy"
-            ></iframe>
+          <!-- Facebook Feed (sticky on desktop) -->
+          <div class="lg:col-span-2 flex justify-center lg:sticky lg:top-24 lg:self-start">
+            <div class="w-full max-w-[500px] rounded-xl overflow-hidden shadow-md border border-slate-100 bg-white p-1">
+              <iframe
+                src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fprofile.php%3Fid%3D61585296192309&tabs=timeline&width=500&height=700&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId"
+                width="500"
+                height="700"
+                class="border-none overflow-hidden rounded-lg w-full max-w-[500px]"
+                scrolling="no"
+                frameborder="0"
+                allowfullscreen="true"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                loading="lazy"
+              ></iframe>
+            </div>
           </div>
         </div>
       </div>
@@ -782,51 +840,227 @@
     <section id="notre-programme" class="py-20 bg-slate-50">
       <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16">
-          <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Que souhaite faire notre liste ?</h2>
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Notre Programme</h2>
           <div class="w-24 h-1 bg-republic-red mx-auto rounded"></div>
           <p class="mt-4 text-slate-600 max-w-2xl mx-auto">
-            Avant la publication de notre programme mi-février, nous vous dévoilons les quatre piliers de notre projet municipal.
+            Découvrez en détail les quatre piliers de notre projet municipal.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-          
-          <!-- Communication citoyenne -->
-          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
-            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="message-circle" class="w-7 h-7"></i>
+        <!-- Intro block -->
+        <div class="max-w-3xl mx-auto mb-14 bg-white rounded-2xl border border-slate-100 p-6 md:p-8 shadow-sm">
+          <p class="text-slate-600 leading-relaxed mb-4">Dans un monde en mutation rapide, nous affirmons une conviction forte : l'avenir de notre village doit rester entre les mains de celles et ceux qui y vivent.</p>
+          <p class="text-slate-600 leading-relaxed mb-4">Nous défendons un pouvoir de décision local, attaché à la proximité et à l'identité rurale de Choisy.</p>
+          <p class="text-slate-600 leading-relaxed mb-4">Menée par François Dizier, notre liste se compose de 3 conseillers sortants et de 18 nouveaux candidats, 11 femmes et 10 hommes. Cette nouvelle équipe, très motivée et dynamique, est prête à s'investir, à être à votre écoute.</p>
+          <p class="text-republic-blue font-semibold">Notre projet municipal s'appuie sur quatre piliers essentiels :</p>
+        </div>
+
+        <!-- 4 Pillar accordion cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+
+          <!-- 1. Communication citoyenne et transparence -->
+          <div class="program-card bg-white rounded-2xl border border-slate-100 transition-all duration-300 overflow-hidden border-t-[3px] border-t-republic-blue" data-program-card>
+            <button type="button" class="program-card__header group/header w-full text-left p-6 md:p-8 flex items-start gap-4 cursor-pointer transition-colors duration-200 hover:bg-slate-50/80" aria-expanded="false">
+              <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover/header:scale-105">
+                <i data-lucide="message-circle" class="w-7 h-7"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover/header:text-republic-blue transition-colors">Communication citoyenne et transparence</h3>
+                <p class="text-slate-500 text-sm italic">Encourager la participation de chacun, renforcer la transparence et intégrer les citoyens aux réflexions.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 flex-shrink-0 mt-1">
+                <div class="program-card__toggle w-8 h-8 rounded-full bg-blue-50 flex items-center justify-center transition-all duration-300 group-hover/header:bg-republic-blue group-hover/header:text-white text-republic-blue">
+                  <i data-lucide="chevron-down" class="program-card__chevron w-4 h-4 transition-transform duration-300"></i>
+                </div>
+                <span class="program-card__label text-[10px] font-semibold uppercase tracking-wider text-slate-400 transition-colors group-hover/header:text-republic-blue">Détail</span>
+              </div>
+            </button>
+            <div class="program-card__details">
+              <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                <div class="h-px bg-slate-100 mb-6"></div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">La communication de nos actions est essentielle pour engager une démocratie participative. Concertation et participation citoyenne seront au cœur de notre mandat.</p>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Communication</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Rendre accessible et compréhensible le fonctionnement de la municipalité (finances, gestion de projet…)</li>
+                  <li>Permettre aux citoyens de faire facilement remonter les informations (outils de signalement)</li>
+                  <li>Diversifier nos outils de communication</li>
+                  <li>S'assurer de la neutralité de l'information</li>
+                  <li>Nous serons vigilants et transparents sur les projets nationaux et internationaux (CERN) qui concernent le territoire</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Démocratie participative</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Favoriser le débat en organisant des réunions publiques</li>
+                  <li>Rendre compte de nos actions</li>
+                  <li>Consulter la population sur les projets majeurs</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Finances locales</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5">
+                  <li>Maintenir une gestion financière saine en capitalisant sur les investissements du passé</li>
+                  <li>Réaliser une projection financière long-terme pour un développement équilibré du territoire</li>
+                  <li>Envisager un soutien financier (budget participatif) pour financer un projet d'initiative citoyenne</li>
+                </ul>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Communication citoyenne et transparence</h3>
-            <p class="text-slate-600 mb-6 italic">Encourager la participation de chacun, renforcer la transparence et intégrer la transparence aux réflexions.</p>
           </div>
 
-          <!-- Cohésion sociale et intergénérationnelle -->
-          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
-            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+          <!-- 2. Cohésion sociale et intergénérationnelle -->
+          <div class="program-card bg-white rounded-2xl border border-slate-100 transition-all duration-300 overflow-hidden border-t-[3px] border-t-republic-red" data-program-card>
+            <button type="button" class="program-card__header group/header w-full text-left p-6 md:p-8 flex items-start gap-4 cursor-pointer transition-colors duration-200 hover:bg-slate-50/80" aria-expanded="false">
+              <div class="w-14 h-14 bg-orange-50 text-republic-red rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover/header:scale-105">
+                <i data-lucide="heart-handshake" class="w-7 h-7"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover/header:text-republic-blue transition-colors">Cohésion sociale et intergénérationnelle</h3>
+                <p class="text-slate-500 text-sm italic">Renforcer le lien entre les générations et maintenir l'attractivité de notre commune.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 flex-shrink-0 mt-1">
+                <div class="program-card__toggle w-8 h-8 rounded-full bg-orange-50 flex items-center justify-center transition-all duration-300 group-hover/header:bg-republic-red group-hover/header:text-white text-republic-red">
+                  <i data-lucide="chevron-down" class="program-card__chevron w-4 h-4 transition-transform duration-300"></i>
+                </div>
+                <span class="program-card__label text-[10px] font-semibold uppercase tracking-wider text-slate-400 transition-colors group-hover/header:text-republic-red">Détail</span>
+              </div>
+            </button>
+            <div class="program-card__details">
+              <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                <div class="h-px bg-slate-100 mb-6"></div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">Notre commune doit préparer son avenir, sans renier son identité, pour maintenir son attractivité et sa stabilité. Nous souhaitons renforcer les liens sociaux et intergénérationnels pour offrir à nos aînés et à la jeunesse une commune où il fait toujours bon vivre.</p>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Cohésion sociale</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>S'appuyer sur l'expérience de nos aînés et leur connaissance du territoire pour préserver notre terroir</li>
+                  <li>Développer les liens intergénérationnels en organisant des temps forts avec l'école</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Jeunesse</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Étudier le réaménagement et la multifonctionnalité du stade de Menulles pour créer des espaces d'accueil</li>
+                  <li>Aménager les cours de récréation de l'école pour le bien-être des enfants et du personnel</li>
+                  <li>Créer une aire de jeux</li>
+                  <li>Étudier la création d'une structure pour la petite enfance</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Animations et loisirs</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5">
+                  <li>Réaliser un théâtre de verdure derrière la mairie</li>
+                  <li>Continuer d'encourager et de soutenir la vie associative</li>
+                  <li>Réaménager les infrastructures du parcours de santé</li>
+                </ul>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Cohésion sociale et intergénérationnelle</h3>
-            <p class="text-slate-600 mb-6 italic">Renforcer le lien entre les générations et maintenir l'attractivité de notre commune.</p>
           </div>
 
-          <!-- Patrimoine immobilier et naturel -->
-          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
-            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="landmark" class="w-7 h-7"></i>
+          <!-- 3. Patrimoine immobilier et naturel -->
+          <div class="program-card bg-white rounded-2xl border border-slate-100 transition-all duration-300 overflow-hidden border-t-[3px] border-t-emerald-600" data-program-card>
+            <button type="button" class="program-card__header group/header w-full text-left p-6 md:p-8 flex items-start gap-4 cursor-pointer transition-colors duration-200 hover:bg-slate-50/80" aria-expanded="false">
+              <div class="w-14 h-14 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover/header:scale-105">
+                <i data-lucide="landmark" class="w-7 h-7"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover/header:text-republic-blue transition-colors">Patrimoine immobilier et naturel</h3>
+                <p class="text-slate-500 text-sm italic">Protéger le bien commun bâti ou naturel, et développer des infrastructures adaptées.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 flex-shrink-0 mt-1">
+                <div class="program-card__toggle w-8 h-8 rounded-full bg-emerald-50 flex items-center justify-center transition-all duration-300 group-hover/header:bg-emerald-600 group-hover/header:text-white text-emerald-600">
+                  <i data-lucide="chevron-down" class="program-card__chevron w-4 h-4 transition-transform duration-300"></i>
+                </div>
+                <span class="program-card__label text-[10px] font-semibold uppercase tracking-wider text-slate-400 transition-colors group-hover/header:text-emerald-600">Détail</span>
+              </div>
+            </button>
+            <div class="program-card__details">
+              <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                <div class="h-px bg-slate-100 mb-6"></div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">Nous souhaitons poursuivre la préservation de notre patrimoine historique et l'identité rurale de notre territoire. Nous souhaitons préserver nos paysages et notre environnement lors de l'évolution du PLU.</p>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Urbanisme et aménagement</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Poursuivre l'aménagement du chef-lieu pour créer un véritable cœur de village</li>
+                  <li>Assurer la sécurisation du village (routière, vidéosurveillance)</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Bâtiments communaux</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Améliorer l'efficacité énergétique des bâtiments communaux pour réduire les dépenses de fonctionnement</li>
+                  <li>Valoriser l'ancienne mairie (bibliothèque) et la salle des fêtes</li>
+                  <li>Concerter sur le devenir de l'école de Véry</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Environnement</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Protéger les forêts contre le changement climatique et le risque d'incendie</li>
+                  <li>Continuer d'aménager le jardin communal</li>
+                  <li>Poursuivre les matinées de l'environnement</li>
+                  <li>Accompagner les travaux du SILA pour l'assainissement</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Ressource en eau</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5">
+                  <li>Surveiller le bon état des affluents des Usses et les captages en lien avec le Syndicat de Rivière des Usses (Syr'Usses) et la CCFU</li>
+                  <li>Favoriser la récupération et valorisation des eaux de pluie</li>
+                  <li>Poursuivre la préservation des zones humides</li>
+                </ul>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Patrimoine immobilier et naturel</h3>
-            <p class="text-slate-600 mb-6 italic">Protéger le bien commun bâti ou naturel, et développer des infrastructures adaptées.</p>
           </div>
 
-          <!-- Nos entrepreneurs, nos commercants, nos agriculteurs -->
-          <div class="program-card bg-white rounded-2xl p-8 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 border border-slate-100">
-            <div class="w-14 h-14 bg-blue-100 text-republic-blue rounded-full flex items-center justify-center mb-6">
-              <i data-lucide="store" class="w-7 h-7"></i>
+          <!-- 4. Entrepreneurs, Commerçants et Agriculteurs -->
+          <div class="program-card bg-white rounded-2xl border border-slate-100 transition-all duration-300 overflow-hidden border-t-[3px] border-t-amber-500" data-program-card>
+            <button type="button" class="program-card__header group/header w-full text-left p-6 md:p-8 flex items-start gap-4 cursor-pointer transition-colors duration-200 hover:bg-slate-50/80" aria-expanded="false">
+              <div class="w-14 h-14 bg-amber-50 text-amber-600 rounded-full flex items-center justify-center flex-shrink-0 transition-transform duration-300 group-hover/header:scale-105">
+                <i data-lucide="store" class="w-7 h-7"></i>
+              </div>
+              <div class="flex-1 min-w-0">
+                <h3 class="text-xl font-bold text-slate-800 mb-1 group-hover/header:text-republic-blue transition-colors">Entrepreneurs, Commerçants et Agriculteurs</h3>
+                <p class="text-slate-500 text-sm italic">Accompagner et soutenir nos acteurs économiques.</p>
+              </div>
+              <div class="flex flex-col items-center gap-1 flex-shrink-0 mt-1">
+                <div class="program-card__toggle w-8 h-8 rounded-full bg-amber-50 flex items-center justify-center transition-all duration-300 group-hover/header:bg-amber-500 group-hover/header:text-white text-amber-600">
+                  <i data-lucide="chevron-down" class="program-card__chevron w-4 h-4 transition-transform duration-300"></i>
+                </div>
+                <span class="program-card__label text-[10px] font-semibold uppercase tracking-wider text-slate-400 transition-colors group-hover/header:text-amber-600">Détail</span>
+              </div>
+            </button>
+            <div class="program-card__details">
+              <div class="px-6 md:px-8 pb-6 md:pb-8 pt-0">
+                <div class="h-px bg-slate-100 mb-6"></div>
+                <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">Les entreprises sont le moteur de notre commune. Nous souhaitons renforcer les relations de proximité avec toutes les entreprises du territoire et les soutenir dans leur activité.</p>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Agriculture</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Préserver l'activité agricole en maîtrisant le développement de l'urbanisation et en créant des réserves foncières d'aides à l'activité agricole</li>
+                  <li>Contrôler la destination des terrains agricoles</li>
+                  <li>Stimuler l'achat de produits locaux</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Économie locale</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5 mb-5">
+                  <li>Solliciter au mieux les entreprises locales</li>
+                  <li>Pérenniser nos commerçants sur la commune</li>
+                  <li>Être à l'écoute des professionnels de la commune</li>
+                  <li>Étudier des solutions de coworking</li>
+                  <li>Relancer l'aménagement des locaux au-dessus de l'auberge</li>
+                </ul>
+
+                <h4 class="text-sm font-bold text-republic-blue uppercase tracking-wider mb-3">Tourisme</h4>
+                <ul class="list-disc pl-5 text-slate-600 text-sm leading-relaxed space-y-1.5">
+                  <li>Développer la visibilité de Choisy au niveau touristique</li>
+                  <li>Favoriser la création d'un réseau de gîtes en lien avec la CCFU</li>
+                  <li>Prévoir des places dédiées aux campings-caristes</li>
+                </ul>
+              </div>
             </div>
-            <h3 class="text-xl font-bold text-slate-800 mb-3">Entrepreneurs, Commerçants, Agriculteurs</h3>
-            <p class="text-slate-600 mb-6 italic">Accompagner et soutenir nos acteurs économiques.</p>
           </div>
 
+        </div>
+
+        <!-- Download CTA -->
+        <div class="text-center mt-12">
+          <a href="assets/pdf/programme_choisy_pour_tous.pdf" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-republic-blue hover:bg-blue-900 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-md hover:shadow-lg">
+            <i data-lucide="download" class="w-5 h-5"></i>
+            <span>Télécharger le programme (PDF, 23 Mo)</span>
+          </a>
         </div>
       </div>
     </section>

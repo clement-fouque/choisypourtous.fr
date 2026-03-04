@@ -29,9 +29,96 @@ html {
   transition: filter 0.5s ease, transform 0.5s ease;
 }
 
-/* Additional polish for the program cards */
+/* Program accordion cards */
 .program-card {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.program-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(2, 48, 71, 0.07);
+}
+.program-card__header {
+  background: none;
+  border: none;
+  font: inherit;
+}
+.program-card__details {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.program-card__details > div {
+  overflow: hidden;
+}
+.program-card--open .program-card__details {
+  grid-template-rows: 1fr;
+}
+.program-card--open .program-card__chevron {
+  transform: rotate(180deg);
+}
+.program-card--open {
+  box-shadow: 0 8px 32px rgba(2, 48, 71, 0.1);
+  transform: translateY(-2px);
+}
+.program-card--open .program-card__label {
+  opacity: 0;
+  pointer-events: none;
+}
+.program-card--open .program-card__toggle {
+  background-color: #023047;
+  color: #fff;
+}
+
+/* Actualités section */
+.actualite-card {
+  position: relative;
+}
+.actualite-card--featured {
+  margin-left: 0;
+  padding-left: 0;
+}
+/* Line-clamp fallback for excerpt (Tailwind line-clamp-2/3) */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+/* Staggered fade-in for actualité cards */
+.actualite-item {
+  animation: actualite-fade-in 0.5s ease-out both;
+}
+.actualite-item:nth-child(1) { animation-delay: 0.05s; }
+.actualite-item:nth-child(2) { animation-delay: 0.1s; }
+.actualite-item:nth-child(3) { animation-delay: 0.15s; }
+.actualite-item:nth-child(4) { animation-delay: 0.2s; }
+.actualite-item:nth-child(5) { animation-delay: 0.25s; }
+.actualite-item:nth-child(6) { animation-delay: 0.3s; }
+.actualite-item:nth-child(7) { animation-delay: 0.35s; }
+.actualite-item:nth-child(8) { animation-delay: 0.4s; }
+@media (prefers-reduced-motion: reduce) {
+  .actualite-item {
+    animation: none;
+  }
+}
+@keyframes actualite-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.actualite-item--more.actualite-item--visible {
+  animation: actualite-fade-in 0.4s ease-out both;
 }
