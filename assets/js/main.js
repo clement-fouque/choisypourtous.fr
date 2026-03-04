@@ -20,7 +20,7 @@ function openCandidateModal(button) {
     // The location text is inside a div with flex, we can just get the text content and trim
     // Structure: <div class="flex ..."><i ...></i> Location</div>
     // We use querySelector with the lucide icon's parent
-    const locationDiv = card.querySelector('.flex.items-center.text-slate-400');
+    const locationDiv = card.querySelector('.inline-flex.items-center.bg-blue-50') || card.querySelector('.flex.items-center.text-slate-400');
     const location = locationDiv ? locationDiv.innerText.trim() : '';
 
     // Populate Modal
@@ -130,6 +130,35 @@ document.querySelectorAll('[data-program-card]').forEach(card => {
     header.setAttribute('aria-expanded', !isOpen);
   });
 });
+
+// Candidate cards: staggered scroll-reveal via IntersectionObserver
+(function () {
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const cards = document.querySelectorAll('.candidate-card');
+  if (!cards.length) return;
+
+  if (prefersReducedMotion) return;
+
+  cards.forEach(card => card.classList.add('candidate-card--hidden'));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('candidate-card--hidden');
+          entry.target.classList.add('candidate-card--visible');
+          observer.unobserve(entry.target);
+          setTimeout(() => {
+            entry.target.classList.remove('candidate-card--visible');
+          }, 1000);
+        }
+      });
+    },
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+  );
+
+  cards.forEach(card => observer.observe(card));
+})();
 
 // Copy Email Function
 function copyEmail() {

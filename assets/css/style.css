@@ -18,15 +18,100 @@ html {
   transition: background-color 0.3s, padding 0.3s, box-shadow 0.3s;
 }
 
-/* Hover effects for candidates */
-.candidate-card:hover img {
-  transform: scale(1.1);
-  filter: grayscale(0%);
+/* ─── Candidate cards ─── */
+
+.candidate-card {
+  position: relative;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.candidate-card:hover {
+  transform: translateY(-4px);
 }
 
 .candidate-card img {
-  /* filter: grayscale(100%); */
-  transition: filter 0.5s ease, transform 0.5s ease;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              filter 0.6s ease;
+}
+.candidate-card:hover img {
+  transform: scale(1.05);
+  filter: brightness(1.05);
+}
+
+/* Accent line that appears on hover */
+.candidate-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: #023047;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.candidate-card:hover::after {
+  transform: scaleX(1);
+}
+
+/* Lead candidate special sizing */
+.candidate-card--lead::after {
+  background: linear-gradient(90deg, #023047, #fb8500);
+}
+
+/* Button arrow nudge on hover */
+.candidate-card__btn:hover i {
+  transform: translateX(3px);
+}
+
+/* ─── Scroll reveal animation ─── */
+
+.candidate-card--hidden {
+  opacity: 0;
+  transform: translateY(24px);
+}
+.candidate-card--visible {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Stagger delays for grid wave effect (based on card index, 1-indexed; lead card is :nth-child(1)) */
+.candidate-card--visible:nth-child(1)  { transition-delay: 0.00s; }
+.candidate-card--visible:nth-child(2)  { transition-delay: 0.06s; }
+.candidate-card--visible:nth-child(3)  { transition-delay: 0.12s; }
+.candidate-card--visible:nth-child(4)  { transition-delay: 0.18s; }
+.candidate-card--visible:nth-child(5)  { transition-delay: 0.24s; }
+.candidate-card--visible:nth-child(6)  { transition-delay: 0.06s; }
+.candidate-card--visible:nth-child(7)  { transition-delay: 0.12s; }
+.candidate-card--visible:nth-child(8)  { transition-delay: 0.18s; }
+.candidate-card--visible:nth-child(9)  { transition-delay: 0.24s; }
+.candidate-card--visible:nth-child(10) { transition-delay: 0.30s; }
+.candidate-card--visible:nth-child(11) { transition-delay: 0.06s; }
+.candidate-card--visible:nth-child(12) { transition-delay: 0.12s; }
+.candidate-card--visible:nth-child(13) { transition-delay: 0.18s; }
+.candidate-card--visible:nth-child(14) { transition-delay: 0.24s; }
+.candidate-card--visible:nth-child(15) { transition-delay: 0.30s; }
+.candidate-card--visible:nth-child(16) { transition-delay: 0.06s; }
+.candidate-card--visible:nth-child(17) { transition-delay: 0.12s; }
+.candidate-card--visible:nth-child(18) { transition-delay: 0.18s; }
+.candidate-card--visible:nth-child(19) { transition-delay: 0.24s; }
+.candidate-card--visible:nth-child(20) { transition-delay: 0.30s; }
+.candidate-card--visible:nth-child(21) { transition-delay: 0.06s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .candidate-card--hidden {
+    opacity: 1;
+    transform: none;
+  }
+  .candidate-card--visible {
+    transition: none;
+  }
+  .candidate-card:hover {
+    transform: none;
+  }
 }
 
 /* Program accordion cards */

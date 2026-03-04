@@ -270,10 +270,9 @@
                     <p><strong class="text-republic-blue">Comment sont répartis les sièges à Choisy (avec 2 listes) ?</strong></p>
                     <ul class="list-disc pl-5 space-y-1 mb-2">
                       <li>La liste optenant la majorité absolue au 1<sup>er</sup> tour reçoit la moitié (10) des sièges du conseil municipal.</li>
-                      <li>L'autre moitié (9) est répartie à la proportionnelle entre les listes.</li>
+                      <li>L'autre moitié (9) est répartie à la proportionnelle entre les 2 listes.</li>
                     </ul>
                     <p>Si aucune liste n'obtient la majorité absolue, un 2<sup>e</sup> tour est organisé.</p>
-                    <p><strong class="text-republic-blue">Un seul tour de scrutin</strong> <br/>N'ayant que deux listes, il n'y aura qu'un seul tour de scrutin.</p>
                     <p class="pt-2"><strong class="text-republic-blue">En résumé</strong> : en 2026, vous choisissez une équipe complète, et la répartition des sièges reflète plus fidèlement le résultat du vote.</p>
                   </div>
                 </div>
@@ -354,7 +353,7 @@
     </section>
 
     <!-- Team Section -->
-    <section id="notre-equipe" class="py-20 bg-white">
+    <section id="notre-equipe" class="py-20 bg-white overflow-hidden">
       <div class="container mx-auto px-4 md:px-8">
         <div class="text-center mb-16">
           <h2 class="text-3xl md:text-4xl font-serif font-bold text-republic-blue mb-4">Les 21 Candidats Choisy pour tous</h2>
@@ -363,15 +362,18 @@
         </div>
 
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-6">
-          <!-- Candidates -->          
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
-            <div class="relative overflow-hidden h-72 bg-slate-200">
+
+          <!-- Lead Candidate -->
+          <div class="candidate-card candidate-card--lead sm:col-span-2 bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col sm:flex-row">
+            <div class="relative overflow-hidden h-72 sm:h-auto sm:w-1/2 bg-slate-200 flex-shrink-0">
               <img src="assets/img/profiles/francois.avif" alt="Francois Dizier" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/70 via-republic-blue/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+              <span class="absolute top-3 left-3 bg-republic-red text-white text-[11px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-md">Tête de liste</span>
             </div>
-            <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Francois Dizier</h3>
-              <p class="text-slate-500 font-medium mb-1">Sapeur pompier</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Grillon</div>
+            <div class="p-6 flex flex-col flex-1 justify-center">
+              <h3 class="font-serif font-bold text-republic-blue text-2xl mb-1">Francois Dizier</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Sapeur pompier</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Grillon</div>
               <div class="candidate-description hidden">
                 <p>Je suis au hameau de chez Grillon depuis 2 ans, après avoir habité six ans à Rossy. Marié et père de deux enfants qui ont fait et qui font encore leur scolarité à Choisy.</p>
                 <br/>
@@ -379,21 +381,24 @@
                 <br/>
                 <p>Je souhaite être le facilitateur du citoyen afin qu’il puisse connaître, comprendre et interagir avec sa municipalité.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn mt-auto py-2.5 px-5 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/cedric.avif" alt="Cédric Regli" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Les Bourgeois</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Cédric Regli</h3>
-              <p class="text-slate-500 font-medium mb-1">Responsable d'un centre technique municipal</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Bourgeois</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Cédric Regli</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Responsable d'un centre technique municipal</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Les Bourgeois</div>
               <div class="candidate-description hidden">
                 <p>Choisylien d’adoption depuis 17 ans sur le hameau des Bourgeois, je suis l’heureux papa de 3 filles.</p>
                 <br/>
@@ -401,21 +406,24 @@
                 <br/>
                 <p>Au plaisir de vous rencontrer sur les chemins de la commune que j’aime parcourir…ou à la mairie !</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/anne_laure.avif" alt="Anne-Laure Lavorel" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Véry</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Anne-Laure Lavorel</h3>
-              <p class="text-slate-500 font-medium mb-1">Aide soignante</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Véry</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Anne-Laure Lavorel</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Aide soignante</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Véry</div>
               <div class="candidate-description hidden">
                 <p>Choisylienne de naissance et petite-fille d’un ancien élu, je suis profondément attachée à ma commune et à ses valeurs.</p>
                 <br/>
@@ -423,21 +431,24 @@
                 <br/>
                 <p>Je souhaite m’impliquer activement dans la vie de la commune, j’ai décidé de m’engager au sein du conseil municipal afin d'œuvrer au plus près des habitants et de contribuer au développement de notre territoire.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
-         
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/killian.avif" alt="Killian L'homme" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Véry</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Killian L'homme</h3>
-              <p class="text-slate-500 font-medium mb-1">Agent de la fonction publique territoriale</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Véry</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Killian L'homme</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Agent de la fonction publique territoriale</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Véry</div>
               <div class="candidate-description hidden">
                 <p>Habitant Choisy depuis 15 ans, je me promène régulièrement sur les chemins, en randonnée ou à vélo. Je travaille dans la fonction publique territoriale, à la CCFU, par volonté d’agir concrètement pour l’intérêt général, où j’accorde beaucoup d’importance à l’échange et au travail collectif pour trouver des solutions adaptées au terrain.</p>
                 <br/>
@@ -445,21 +456,24 @@
                 <br/>
                 <p>Je suis également très attaché à l’agriculture et à la protection de l’environnement, et je souhaite m’engager pour préserver nos paysages, nos ressources et notre cadre de vie, indispensables à l’avenir de Choisy.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-           <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/xaviere.avif" alt="Xavière Michelot" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Ballaison</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Xavière Michelot</h3>
-              <p class="text-slate-500 font-medium mb-1">Cadre dans la santé</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Ballaison</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Xavière Michelot</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Cadre dans la santé</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Ballaison</div>
               <div class="candidate-description hidden">
                 <p>Je m’appelle Xavière Michelot, j’ai 48 ans. J’habite Choisy depuis un peu moins de deux ans et je parcours les chemins de la commune presque chaque jour, à pied ou à cheval. C’est une commune que j’ai appris à connaître sur le terrain, au quotidien.</p>
                 <br/>
@@ -469,41 +483,47 @@
                 <br/>
                 <p>Je suis convaincue qu’une commune fonctionne mieux lorsque les citoyens comprennent, participent et se sentent pleinement partie prenante des décisions collectives.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/olivier.avif" alt="Olivier Miguet" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Arthaz</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Olivier Miguet</h3>
-              <p class="text-slate-500 font-medium mb-1">Salarié agricole</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Arthaz</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Olivier Miguet</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Salarié agricole</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Arthaz</div>
               <div class="candidate-description hidden">
                 <p>Marié et père de deux enfants, je suis issu d’une famille implantée à Arthaz depuis plus de quatre générations.</p>
                 <br/>
                 <p>Salarié agricole et profondément attaché à mon village, je me suis engagé pour préserver son identité, lui donner plus de visibilité et offrir davantage de place à la parole des citoyens, afin de construire ensemble l’avenir de notre commune.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/jacqueline.avif" alt="Jacqueline Ceccon" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Champfleury</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Jacqueline Ceccon</h3>
-              <p class="text-slate-500 font-medium mb-1">Retraitée</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Champfleury</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Jacqueline Ceccon</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Retraitée</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Champfleury</div>
               <div class="candidate-description hidden">
                 <p>A Choisy depuis plus de 40 ans, j’ai participé à la vie communale dès les années 90 à l’association de la cantine de notre école où ont été scolarisé mes trois filles; je me suis ensuite investie à la mairie et à l’intercommunalité où je m’occupe depuis 3 mandats de développement durable/transition écologique.</p>
                 <br/>
@@ -511,21 +531,24 @@
                 <br/>
                 <p>Je me présente pour accompagner une équipe dynamique, renouvelée et motivée ainsi que pour continuer à défendre notre qualité de vie et notre environnement.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/simon.avif" alt="Simon Desseigne" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Combes</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Simon Desseigne</h3>
-              <p class="text-slate-500 font-medium mb-1">Entrepreneur indépendant</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Combes</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Simon Desseigne</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Entrepreneur indépendant</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Combes</div>
               <div class="candidate-description hidden">
                 <p>Habitant du territoire de la CCFU (Communauté de Communes de Fier & Usses) depuis une quinzaine d’années et installé à Choisy depuis quatre ans, je suis papa de deux jeunes filles et en couple avec une écologue.</p>
                 <br/>
@@ -535,21 +558,24 @@
                 <br/>
                 <p>Je souhaite également m’investir au sein de la CCFU pour porter la voix de Choisy, partager ce qui fait sa richesse et participer activement aux projets intercommunaux, dans un esprit de coopération et de confiance, afin de bâtir collectivement un territoire durable et harmonieux.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/aurore.avif" alt="Aurore Mossière" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Les Bourgeois</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Aurore Mossière</h3>
-              <p class="text-slate-500 font-medium mb-1">Agricultrice</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Bourgeois</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Aurore Mossière</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Agricultrice</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Les Bourgeois</div>
               <div class="candidate-description hidden">
                 <p>Je suis originaire de Choisy et agricultrice sur la commune depuis 8 ans.</p>
                 <br/>
@@ -557,41 +583,47 @@
                 <br/>
                 <p>Mon engagement repose sur des valeurs de proximité et de respect de notre cadre de vie au service de l’avenir de notre commune.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/clement.avif" alt="Clément Fouque" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Véry</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Clément Fouque</h3>
-              <p class="text-slate-500 font-medium mb-1">Expert cybersécurité</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Véry</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Clément Fouque</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Expert cybersécurité</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Véry</div>
               <div class="candidate-description hidden">
                 <p>Habitant du hameau de Véry depuis 5 ans, je suis papa de deux filles scolarisées à l'école de Choisy.</p>
                 <br/>
                 <p>Je souhaite m'engager au sein du conseil municipal pour promouvoir la transparence des décisions et mettre en place de la démocratie participative, afin que chaque Choisylien puisse se sentir écouté et impliqué dans l'avenir de notre commune.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/sylvie.avif" alt="Sylvie Auroy" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Rossy</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Sylvie Auroy</h3>
-              <p class="text-slate-500 font-medium mb-1">Conseillère Agricole</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Rossy</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Sylvie Auroy</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Conseillère Agricole</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Rossy</div>
               <div class="candidate-description hidden">
                 <p>Je m’appelle Sylvie Auroy, j’ai 45 ans et je suis Choisylienne depuis 25 ans. Maman de deux enfants scolarisés à Choisy, j’habite le hameau de Rossy. Véry, village d’origine de ma belle-famille, est également un lieu auquel je suis profondément attachée.</p>
                 <br/>
@@ -603,21 +635,24 @@
                 <br/>
                 <p>Ensemble, nous avons de belles choses à partager et à construire.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/kevin.avif" alt="Kevin Zamora" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Les Bourgeois</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Kevin Zamora</h3>
-              <p class="text-slate-500 font-medium mb-1">Responsable marché négoce bois</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Bourgeois</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Kevin Zamora</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Responsable marché négoce bois</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Les Bourgeois</div>
               <div class="candidate-description hidden">
                 <p>J’habite la commune de Choisy depuis maintenant 6 ans et aujourd’hui je réside au hameau des bourgeois.</p>
                 <br/>
@@ -629,20 +664,24 @@
                 <br/>
                 <p>Je veux m’engager avec l’ensemble des concitoyens, dans un esprit de dialogue, d’écoute et de construction collective.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/gwennaelle.avif" alt="Gwennaëlle Alexandre" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Les Megevands</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Gwennaëlle Alexandre</h3>
-              <p class="text-slate-500 font-medium mb-1">Ingénieure, Responsable projets</p>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Gwennaëlle Alexandre</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Ingénieure, Responsable projets</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Les Megevands</div>
               <div class="candidate-description hidden">
                 <p>Implantée avec ma famille sur la commune de Choisy depuis plus de 10 ans, j’ai dès mon arrivée investi un rôle dans l'associatif du village.</p>
                 <br/>
@@ -650,22 +689,24 @@
                 <br/>
                 <p>Je suis par ailleurs responsable technique en industrie, avec une bonne connaissance du paysage local des partenaires techniques/bâtiments.</p>
               </div>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Les Megevands</div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/cyril.avif" alt="Cyril Masson" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Rossy</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Cyril Masson</h3>
-              <p class="text-slate-500 font-medium mb-1">Agent de sécurité</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Rossy</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Cyril Masson</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Agent de sécurité</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Rossy</div>
               <div class="candidate-description hidden">
                 <p>Choisylien depuis bientôt 4 ans habitant du hameau de Rossy, je souhaite m’engager au sein du conseil municipal pour continuer à garder le lien intergénérationnel.</p>
                 <br/>
@@ -673,41 +714,47 @@
                 <br/>
                 <p>Papa de 4 enfants dont un scolarisé au sein de notre école je me dois de m’impliquer au sein de notre commune afin de continuer à la faire prospérer.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/marion.avif" alt="Marion Sagnol Mousset" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Le Château</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Marion Sagnol Mousset</h3>
-              <p class="text-slate-500 font-medium mb-1">Directrice Import Export</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Le Château</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Marion Sagnol Mousset</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Directrice Import Export</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Le Château</div>
               <div class="candidate-description hidden">
                 <p>Choisylienne depuis 20 ans et vivant dans le quartier de Perroud-Château, je souhaite aujourd' hui m’investir dans notre commune pour créer du lien entre ses habitants.</p>
                 <br/>
                 <p>Mère de 3 enfants, femme active et impliquée dans le milieu associatif depuis de nombreuses années, il me tient à coeur “le vivre ensemble“ toute génération confondue au travers d’événements qui animent notre beau village.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/jean_luc.avif" alt="Jean-Luc Giacometti" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Basset</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Jean-Luc Giacometti</h3>
-              <p class="text-slate-500 font-medium mb-1">Responsable Technique</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Basset</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Jean-Luc Giacometti</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Responsable Technique</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Basset</div>
               <div class="candidate-description hidden">
                 <p>Marié avec une choisylienne et résidant au hameau Chez Basset, j’ai été adopté par cette belle commune depuis bientôt 35 ans.</p>
                 <br/>
@@ -717,21 +764,24 @@
                 <br/>
                 <p>La liste CHOISY POUR TOUS, qui est une liste jeune et dynamique, à confirmé mon choix d’engagement par son projet qui veut apporter du renouveau, de la responsabilité et de la transparence en misant sur le travail initié par les équipes précédentes.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/pauline.avif" alt="Pauline Bolard" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Chef Lieu</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Pauline Bolard</h3>
-              <p class="text-slate-500 font-medium mb-1">Comptable</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Chef Lieu</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Pauline Bolard</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Comptable</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Chef Lieu</div>
               <div class="candidate-description hidden">
                 <p>En couple avec un choisylien de toujours et belle fille d’un ancien élu.</p>
                 <br/>
@@ -739,21 +789,24 @@
                 <br/>
                 <p>J’ai toujours été très bien accueillie et intégrée par les gens du village et je souhaite m’engager au conseil municipal pour maintenir un cadre de vie épanouissant pour nos enfants et apporter les services et le soutien dont nos ainés ont besoin car ils sont pour moi l’âme et la mémoire de Choisy.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/paule.avif" alt="Paule Bossert" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Chef Lieu</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Paule Bossert</h3>
-              <p class="text-slate-500 font-medium mb-1">Sans Profession</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Chef Lieu</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Paule Bossert</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Sans Profession</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Chef Lieu</div>
               <div class="candidate-description hidden">
                 <p>Habitante du Chef-Lieu depuis 9 ans, maman de 3 enfants, j’ai une formation dans le bâtiment et ai travaillé pendant 15 ans dans le domaine des assurances bâtiments.</p>
                 <br/>
@@ -761,39 +814,45 @@
                 <br/>
                 <p>Soucieuse du respect d’autrui et de l’équité, mon engagement est de mettre toujours l’intérêt général en avant.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/andreas.avif" alt="Andréas Handlbauer" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Combes</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Andréas Handlbauer</h3>
-              <p class="text-slate-500 font-medium mb-1">Infirmier</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Combes</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Andréas Handlbauer</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Infirmier</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Combes</div>
               <div class="candidate-description hidden">
                 <p>Installé à Combes depuis 6 ans, père de 3 enfants, infirmier et habitué du travail associatif, je souhaite m’investir dans le conseil municipal afin d’apporter mon regard sur les enjeux liés à la nouvelle démographie de notre village, le vivre-ensemble et la citoyenneté participative.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/sylvia.avif" alt="Sylvia Mollier" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Arthaz</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Sylvia Mollier</h3>
-              <p class="text-slate-500 font-medium mb-1">Éducatrice de jeunes enfants</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Arthaz</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Sylvia Mollier</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Éducatrice de jeunes enfants</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Arthaz</div>
               <div class="candidate-description hidden">
                 <p>Je m’appelle Sylvia Mollier et j'ai 38 ans. J’habite le hameau de Arthaz depuis cinq ans maintenant.</p>
                 <br/>
@@ -801,21 +860,24 @@
                 <br/>
                 <p>Engagée au sein d’une équipe attachée au dialogue et à l’engagement citoyen, je souhaite contribuer à la construction d’une municipalité plus participative et à l’écoute de ses habitants.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
 
-          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 overflow-hidden border border-slate-100 group flex flex-col">
+          <div class="candidate-card bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-500 overflow-hidden border border-slate-100 group flex flex-col">
             <div class="relative overflow-hidden h-72 bg-slate-200">
               <img src="assets/img/profiles/romain.avif" alt="Romain Garcin" class="w-full h-full object-cover object-[50%_15%]" loading="lazy" />
+              <div class="candidate-card__overlay absolute inset-0 bg-gradient-to-t from-republic-blue/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-end p-4">
+                <span class="text-white text-xs font-medium tracking-wide opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100"><i data-lucide="map-pin" class="w-3 h-3 inline mr-1"></i>Véry</span>
+              </div>
             </div>
             <div class="p-4 flex flex-col flex-1">
-              <h3 class="font-bold text-republic-blue text-lg">Romain Garcin</h3>
-              <p class="text-slate-500 font-medium mb-1">Agent de maitrîse</p>
-              <div class="flex items-center text-slate-400 text-sm mt-1 mb-4"><i data-lucide="map-pin" class="w-3.5 h-3.5 mr-1"></i> Véry</div>
+              <h3 class="font-serif font-bold text-republic-blue text-lg">Romain Garcin</h3>
+              <p class="text-slate-500 italic text-sm mb-2">Agent de maitrîse</p>
+              <div class="inline-flex items-center bg-blue-50 text-republic-blue text-xs font-medium px-2.5 py-1 rounded-full w-fit mb-4"><i data-lucide="map-pin" class="w-3 h-3 mr-1"></i> Véry</div>
               <div class="candidate-description hidden">
                 <p>Je désire m’impliquer dans la vie communale et contribuer à la préservation de notre cadre de vie.</p>
                 <br/>
@@ -825,9 +887,9 @@
                 <br/>
                 <p>Je souhaite accompagner le groupe dans une dynamique de clarté et d’échanges au service du bien commun.</p>
               </div>
-              <button class="w-full mt-auto py-2 px-4 bg-white hover:bg-republic-blue hover:text-white text-republic-blue rounded-lg text-sm font-medium transition-colors duration-300 flex items-center justify-center border border-republic-blue shadow-sm" onclick="openCandidateModal(this)">
-                <span class="mr-2">Présentation</span>
-                <i data-lucide="plus" class="w-4 h-4"></i>
+              <button class="candidate-card__btn w-full mt-auto py-2 px-4 bg-republic-blue/5 hover:bg-republic-blue text-republic-blue hover:text-white rounded-lg text-sm font-semibold transition-all duration-300 flex items-center justify-center gap-2 border border-republic-blue/20 hover:border-republic-blue" onclick="openCandidateModal(this)">
+                <span>En savoir plus</span>
+                <i data-lucide="arrow-right" class="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"></i>
               </button>
             </div>
           </div>
